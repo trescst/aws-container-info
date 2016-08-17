@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>AWS Container Info</title>
+<style type="text/css">
+body {
+    background-color: #{{HostnameColor}};
+    text-align: center;
+    font-family: "Lucida Console", Monaco, monospace;
+    text-shadow: 0 0 7px #FFFFFF
+}
+.header{
+    width: 100%;
+    background-color: #FFFFFF;
+}
+.square-box{
+    margin: 0 auto;
+    position: relative;
+    width: 40%;
+    overflow: hidden;
+    background: #{{ContainerIDColor}};
+}
+.square-box:before{
+    content: "";
+    display: block;
+    padding-top: 100%%;
+}
+.square-content{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.square-content div {
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+.square-content span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Version 1.0</h1>
+</div>
+<br /><br />
+Hostname: <b>{{Hostname}}</b>
+<div class="square-box">
+<div class="square-content"><div><span>Container ID: <b>{{ContainerID}}</b></span></div>
+</div>
+</div>
+</body>
+</html>
