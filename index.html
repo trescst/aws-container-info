@@ -3,7 +3,7 @@
 <title>AWS Container Info</title>
 <style type="text/css">
 body {
-    background-color: #{{HostnameColor}};
+    background-color: #{{.HostnameColor}};
     text-align: center;
     font-family: "Lucida Console", Monaco, monospace;
     text-shadow: 0 0 7px #FFFFFF
@@ -17,7 +17,7 @@ body {
     position: relative;
     width: 40%;
     overflow: hidden;
-    background: #{{ContainerIDColor}};
+    background: #{{.ContainerIDColor}};
 }
 .square-box:before{
     content: "";
@@ -48,9 +48,9 @@ body {
 <h1>Version 1.0</h1>
 </div>
 <br /><br />
-Hostname: <b>{{Hostname}}</b>
+Hostname: <b>{{.Hostname}}</b>
 <div class="square-box">
-<div class="square-content"><div><span>Container ID: <b>{{ContainerID}}</b></span></div>
+<div class="square-content"><div><span>Container ID: <b>{{.ContainerID}}</b></span></div>
 </div>
 </div>
 </body>
